@@ -52,11 +52,14 @@
  <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
   <div class="tm-flex-center p-5">
     <div class="tm-md-flex-center">
-      <h2 class="tm-text-color-primary mb-4">Language and Automata Theory</h2>
+      <h2 class="tm-text-color-primary mb-4">Algoritma k-Nearest Neighbor</h2>
       <p class="mb-4">
-        1. Apa saja yang dipelajari dalam TBO<br>
-        2. Apa fungsi ilmu yang dipelajari dalam TBO<br>
-        3. Contoh penerapan ilmu TBO
+        <b> Algoritma k-Nearest Neighbor adalah algoritma supervised learning dimana hasil dari instance yang baru diklasifikasikan berdasarkan mayoritas dari kategori k-tetangga terdekat. <br>
+          <br>
+        Tujuan dari algoritma ini adalah untuk mengklasifikasikan obyek baru berdasarkan atribut dan sample-sample dari training data. Klasifikasi data dilakukan berdasarkan data pembelajaran (train data sets), yang diambil dari k tetangga terdekatnya atau data point yang berada berdekatan (nearest neighbors). Dengan k sebagai banyaknya tetangga terdekat.<br>
+        <br>
+        Algoritma k-Nearest Neighbor menggunakan Neighborhood Classificarion sebagai nilai prediksi dari nilai instance yang baru.
+      </b>
       </p>
     </div>
   </div>
@@ -64,7 +67,7 @@
 <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-0">
   <div class="tm-flex-center p-5 tm-bg-color-primary">
     <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-0 text-center">
-      <img src="img/img26.png" alt="Image" class="img-fluid">
+      <img src="img/satu.jpeg" alt="Image" class="img-fluid">
     </div>
   </div>
 </div>
@@ -73,16 +76,22 @@
 <!-- Tugas 2 -->
 <section id="tugas2" class="row tm-section tm-mb-30">
   <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-0 text-center">
-    <img src="img/img28.jpg" alt="Image" class="img-fluid">
+    <div class="tm-flex-center p-5 tm-bg-color-primary">
+    <img src="img/gambar1.png" alt="Image" class="img-fluid">
   </div>
+</div>
   <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
     <div class="tm-flex-center p-5">
       <div class="tm-flex-center tm-flex-col">
-        <h2 class="tm-align-left">Big-O Notation</h2>
-        <p>
-          1. Definisi Notasi Big O<br>
-          2. Kegunaan Notasi Big O<br>
-          3. Contoh-contoh Notasi Big O
+        <p> <b>
+          Secara umum, cara kerja Algoritma KNN (k-Nearest Neighbor) adalah sebagai berikut.<br>
+          <br>
+          1.	Tentukan jumlah tetangga (K) yang akan digunakan untuk pertimbangan penentuan kelas.<br>
+          2.	Hitung jarak dari data baru ke masing-masing data point di dataset. <br>
+          3.	Ambil sejumlah K data dengan jarak terdekat, kemudian tentukan kelas dari data baru tersebut. <br>
+          <br>
+          Dari gambar disamping, ada sejumlah data point yang terbagi menjadi du akelas yaitu A (biru) dan B (kuning). Misalnya ada data baru (hitam) yang akan kita prediksi kelasnya menggunakan algoritma KNN. Dari contoh di atas, nilai K yang digunakan adalah 3. Setelah dihitung jarak antara titik hitam ke masing-masing data point lainnya, didapatkan 3 titik terdekat yang terdiri dari 2 titik kuning dan satu titik biru seperti yang diilustrasikan di dalam kotak merah, maka kelas untuk data baru (titik hitam) adalah B (kuning).
+        </b>
         </p>
       </div>
     </div>
@@ -93,19 +102,52 @@
   <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
    <div class="tm-flex-center p-5">
      <div class="tm-md-flex-center">
-       <h2 class="tm-text-color-primary mb-4">Language and Automata Theory</h2>
-       <p class="mb-4">
-         1. Apa saja yang dipelajari dalam TBO<br>
-         2. Apa fungsi ilmu yang dipelajari dalam TBO<br>
-         3. Contoh penerapan ilmu TBO
-       </p>
+       <h2 class="tm-text-color-primary mb-4">Contoh Kasus</h2>
+       <p class="mb-4"> <b>
+        Misalnya ada sebuah rumah yang berada tepat di tengah perbatasan antara Kota Bandung dan Kabupaten Bandung, sehingga pemerintah kesulitan untuk menentukan apakah rumah tersebur termasuk kedalam wilayah Kota Bandung atau Kabupaten Bandung.<br>
+        <br> 
+        Kita bisa menentukannya dengan menggunakan Algoritma KNN, yaitu dengan melibatkan jarak antara rumah tersebut dengan rumah-rumah yang ada disekitarnya (tetangganya). <br>
+        <br>
+        Pertama, kita harus menentukan jumlah tetangga yang akan kita perhitungkan (k), misalnya kita tentukan 3 tetangga terdekat (k = 3).
+        <br>
+        Kedua, hitung jarak setiap tetangga terhadap rumah tersebut, lalu urutkan hasilnya berdasarkan jarak, mulai dari yang terkecil ke yang terbesar.
+        <br>
+        Ketiga, ambil 3 (k) tetangga yang paling dekat, lalu kita lihat masing-masing dari tetangga tersebut apakah termasuk kedalam wilayah Kota atau Kabupaten. Ada 2 kemungkinan : 
+        <br>
+        <br>
+        >	Bila dari 3 tetangga tersebut terdapat ada 2 rumah yang termasuk kedalam wilayah Kota Bandung, maka rumah tersebut termasuk kedalam wilayah Kota Bandung.
+        <br>
+        >	Sebaliknya, bila dari 3 tetangga tersebut terdapat 2 rumah yang termasuk kedalam wilayah Kabupaten Bandung, maka rumah tersebut termasuk kedalam wilayah Kabupaten Bandung.
+        <br>
+        <br>
+        Dalam menentukan nilai k, bila jumlah klasifikasi kita genap maka sebaiknya kita gunakan nilai k ganjil, dan begitu pula sebaliknya bila jumlah klasifikasi kita ganjil maka sebaiknya gunakan nilai k genap, karena jika tidak begitu, ada kemungkinan kita tidak akan mendapatakan jawaban.
+      </b>
+      </p>
      </div>
    </div>
  </div>
  <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-0">
    <div class="tm-flex-center p-5 tm-bg-color-primary">
      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-0 text-center">
-       <img src="img/img26.png" alt="Image" class="img-fluid">
+       <img src="img/gambar2.jpg" alt="Image" class="img-fluid">
+     </div>
+   </div>
+ </div>
+ </section>
+
+ <section id="tugas1" class="row tm-section tm-col-md-reverse">
+  <div class="col-sm-24 col-md-24 col-lg-24 col-xl-24">
+   <div class="tm-flex-center p-5">
+     <div class="tm-md-flex-center">
+       <h2 class="tm-text-color-primary mb-4">Referensi : </h2>
+       <p class="mb-4">
+         <b> https://medium.com/bee-solution-partners/cara-kerja-algoritma-k-nearest-neighbor-k-nn-389297de543e <br>
+          <br>
+          https://www.advernesia.com/blog/data-science/pengertian-dan-cara-kerja-algoritma-k-nearest-neighbours-knn/  <br>
+          <br>
+          https://ilmudatapy.com/algoritma-k-nearest-neighbor-knn-untuk-klasifikasi/ 
+       </b>
+       </p>
      </div>
    </div>
  </div>
